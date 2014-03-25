@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('pouchdb', [])
   .factory('pouchdb', function($q, $rootScope, $window) {
     var qify = function(fn) {
@@ -13,7 +15,7 @@ angular.module('pouchdb', [])
             }
           });
         };
-        args = arguments !== null ? slice.call(arguments) : [];
+        args = arguments !== null ? Array.prototype.slice.call(arguments) : [];
         args.push(callback);
         fn.apply(this, args);
         return deferred.promise;
