@@ -52,15 +52,9 @@ angular.module('pouchdb', [])
           compact: qify(db.compact.bind(db)),
           revsDiff: qify(db.revsDiff.bind(db)),
           replicate: {
-            to: function(remote, options) {
-              return db.replicate.to(remote, options);
-            },
-            from: function(remote, options) {
-              return db.replicate.from(remote, options);
-            },
-            sync: function(remote, options) {
-              return db.replicate.sync(remote, options);
-            }
+            to: db.replicate.to.bind(db),
+            from: db.replicate.from.bind(db),
+            sync: db.replicate.sync.bind(db)
           },
           destroy: qify(db.destroy.bind(db))
         };
