@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "angular": "~1.2.15",
-    "pouchdb": "~2.1.0"
+    "pouchdb": "~2.2.3"
   },
   "private": true
 }
