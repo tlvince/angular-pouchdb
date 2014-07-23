@@ -48,6 +48,7 @@ angular.module('pouchdb', [])
           getAttachment: qify(db.getAttachment.bind(db)),
           removeAttachment: qify(db.removeAttachment.bind(db)),
           query: qify(db.query.bind(db)),
+          viewCleanup: qify(db.viewCleanup.bind(db)),
           info: qify(db.info.bind(db)),
           compact: qify(db.compact.bind(db)),
           revsDiff: qify(db.revsDiff.bind(db)),
