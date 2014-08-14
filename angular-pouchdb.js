@@ -57,7 +57,8 @@ angular.module('pouchdb', [])
             from: db.replicate.from.bind(db),
             sync: db.replicate.sync.bind(db)
           },
-          destroy: qify(db.destroy.bind(db))
+          destroy: qify(db.destroy.bind(db)),
+          login: qify(db.login.bind(db))
         };
       }
     };
